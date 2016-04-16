@@ -1,0 +1,22 @@
+{
+  "name": "BPM Tapper",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Find the tempo of your music by clicking",
+  "homepage_url": "https://github.com/chrisblazek/bpm-tapper",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "background": {
+    "scripts": [
+      "src/bg/background.js"
+    ],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Click in time with the music"
+  }
+}
