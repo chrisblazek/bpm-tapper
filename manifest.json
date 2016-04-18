@@ -1,6 +1,6 @@
 {
   "name": "BPM Tapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Find the tempo of your music by clicking in time with the beat.",
   "homepage_url": "https://github.com/chrisblazek/bpm-tapper",
