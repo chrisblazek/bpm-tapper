@@ -1,0 +1,1 @@
+zip -r releases/bpmtapper.zip manifest.json icons src
