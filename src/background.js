@@ -1,12 +1,12 @@
 var RESET_TIME = 3000;
 var timeout;
-var lastPress = Date.now();
+var lastPress = performance.now();
 var average = 0;
 var iterations = 1;
 
 chrome.browserAction.onClicked.addListener(function() {
-  var elapsedTime = Date.now() - lastPress;
-  lastPress = Date.now();
+  var elapsedTime = performance.now() - lastPress;
+  lastPress = performance.now();
 
   if (elapsedTime > RESET_TIME) {
     average = 0;
