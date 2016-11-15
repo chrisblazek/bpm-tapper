@@ -1,3 +1,39 @@
 body {
-    width: 200px;
+    width: 256px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    color: #FFF;
+}
+
+#tap {
+    height: 100px;
+    border: 5px solid #2196F3;
+    background-color: #2196F3;
+    font-size: 48px;
+}
+#tap:focus {
+    outline: none;
+}
+#tap:active {
+    border-color: #1976D2;
+}
+
+#reset {
+    height: 36px;
+    border: none;
+    background-color: #1976D2;
+    font-size: 16px;
+}
+#reset:focus {
+    outline: none;
 }

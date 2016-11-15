@@ -5,9 +5,8 @@ let average = 0;
 let iterations = 1;
 
 const tapBtn = document.querySelector('#tap');
-const bpmDisplay = document.querySelector('#bpm');
 
-tapBtn.addEventListener('click', () => {
+function tap() {
     const elapsedTime = performance.now() - lastPress;
     lastPress = performance.now();
 
@@ -18,7 +17,7 @@ tapBtn.addEventListener('click', () => {
         average = (average * (iterations - 1) + elapsedTime) / iterations;
         iterations += 1;
         const bpm = Math.round(60000 / average);
-        bpmDisplay.innerHTML = bpm.toString();
+        tapBtn.innerHTML = bpm.toString();
     }
 
     if (timeout) {
@@ -26,6 +25,10 @@ tapBtn.addEventListener('click', () => {
     }
 
     timeout = setTimeout(function() {
-        bpmDisplay.innerHTML = '0';
+        tapBtn.innerHTML = 'Tap';
     }, RESET_TIME);
-});
+}
+
+tapBtn.addEventListener('click', tap);
+
+document.addEventListener('keydown', tap);
