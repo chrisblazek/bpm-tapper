@@ -12,12 +12,13 @@ button {
     display: inline-block;
     text-align: center;
     width: 100%;
+    border: none;
     color: #FFF;
+    cursor: pointer;
 }
 
 #tap {
     height: 100px;
-    border: 5px solid #2196F3;
     background-color: #2196F3;
     font-size: 48px;
 }
@@ -25,15 +26,17 @@ button {
     outline: none;
 }
 #tap:active {
-    border-color: #1976D2;
+    box-shadow: inset 0 10px 42px rgba(0,0,0,.125);
 }
 
 #reset {
     height: 36px;
-    border: none;
     background-color: #1976D2;
-    font-size: 16px;
+    font-size: 14px;
 }
 #reset:focus {
     outline: none;
+}
+#reset:active {
+    box-shadow: inset 0 10px 40px rgba(0,0,0,.125);
 }

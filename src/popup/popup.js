@@ -5,6 +5,7 @@ let average = 0;
 let iterations = 1;
 
 const tapBtn = document.querySelector('#tap');
+const resetBtn = document.querySelector('#reset');
 
 function tap() {
     const elapsedTime = performance.now() - lastPress;
@@ -32,3 +33,15 @@ function tap() {
 tapBtn.addEventListener('click', tap);
 
 document.addEventListener('keydown', tap);
+
+resetBtn.addEventListener('click', () => {
+    tapBtn.innerHTML = 'Tap';
+    
+    if (timeout) {
+        clearTimeout(timeout);
+    }
+
+    average = 0;
+    iterations = 1;
+});
+
